@@ -36,7 +36,7 @@ export default {
 
   computed: {
     todos () {
-      return Todo.query().withAll().orderBy('id', 'desc').get()
+      return Todo.query().orderBy('id', 'desc').get()
     }
   },
 
