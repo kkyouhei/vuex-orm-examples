@@ -4,6 +4,7 @@
       <div class="header">
         <h2 class="title">TODOS</h2>
         <button class="button" @click="add">ADD TODO</button>
+        <button class="button" @click="loadComment">loadComment</button>
       </div>
 
       <TodosList />
@@ -13,6 +14,7 @@
 
 <script>
 import TodosList from './TodosList'
+import data from '../commentData'
 
 export default {
   components: {
@@ -30,6 +32,10 @@ export default {
       this.$store.dispatch('entities/todos/insert', {
         data: { id: this.id++ }
       })
+    },
+    loadComment () {
+      const initialData = data
+      this.$store.dispatch('entities/comments/insertOrUpdate', { data: initialData })
     }
   }
 }

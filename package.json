@@ -5,7 +5,7 @@
     "build": "NODE_ENV=production webpack --mode production"
   },
   "devDependencies": {
-    "@vuex-orm/core": "^0.23.1",
+    "@vuex-orm/core": "^0.25.1",
     "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",

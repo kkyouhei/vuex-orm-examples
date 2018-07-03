@@ -25,6 +25,7 @@
 import CheckCircle from './icons/CheckCircle'
 import Trash from './icons/Trash'
 import Assignee from './TodosAssignee'
+import Todo from '../store/models/Todo'
 
 export default {
   components: {
@@ -35,7 +36,7 @@ export default {
 
   computed: {
     todos () {
-      return this.$store.getters['entities/todos/query']().orderBy('id', 'desc').get()
+      return Todo.query().withAll().orderBy('id', 'desc').get()
     }
   },
 
